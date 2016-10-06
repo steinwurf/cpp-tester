@@ -14,7 +14,7 @@
 struct record
 {
     std::string name;
-    int id;
+    uint64_t id;
 };
 
 auto find_id(const std::vector<record>& people,
@@ -26,7 +26,7 @@ auto find_id(const std::vector<record>& people,
     };
     auto ii = std::find_if(people.begin(), people.end(), match_name);
     if (ii == people.end())
-        return -1;
+        return (uint64_t)0;
     else
         return ii->id;
 }
