@@ -76,7 +76,9 @@ void test_literals()
     auto integer_literal = 1'000'000;
     auto floating_point_literal = 0.000'015'3;
     auto binary_literal = 0b0100'1100'0110;
-    auto silly_example = 1'0'0'000'00;
+
+    std::cout << "Literals: " << integer_literal << " / "
+              << floating_point_literal << " / "  << binary_literal << "\n";
 
     std::cout << "Output mask: "
               << 0b1000'0001'1000'0000
@@ -86,7 +88,7 @@ void test_literals()
               << "\n";
 }
 
-int main(int argc, const char* argv[])
+int main()
 {
     test_type_deduction();
 
