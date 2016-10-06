@@ -36,8 +36,10 @@ def build(bld):
     CXX = bld.env.get_flat("CXX")
     # Matches both g++ and clang++
     if 'g++' in CXX or 'clang' in CXX:
-        bld.env['CXXFLAGS'].remove('-std=c++11')
-        bld.env['CXXFLAGS'].remove('-std=gnu++11')
+        if '-std=c++11' in bld.env['CXXFLAGS']:
+            bld.env['CXXFLAGS'].remove('-std=c++11')
+        if '-std=gnu++11' in bld.env['CXXFLAGS']:
+            bld.env['CXXFLAGS'].remove('-std=gnu++11')
         bld.env.append_value('CXXFLAGS', '-std=c++14')
 
     if bld.is_toplevel():
