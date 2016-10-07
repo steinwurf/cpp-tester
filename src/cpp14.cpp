@@ -10,7 +10,6 @@
 #include <string>
 #include <numeric>
 #include <memory>
-#include <map>
 
 struct record
 {
@@ -87,13 +86,6 @@ void test_literals()
     std::cout << "Proposed salary: $"
               << 300'000.00
               << "\n";
-}
-
-void test_type_get()
-{
-    std::tuple<uint16_t, uint32_t> treasure({0,42});
-
-    std::cout << std::get<uint32_t>(treasure);
 }
 
 int main()
