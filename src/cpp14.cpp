@@ -88,6 +88,13 @@ void test_literals()
               << "\n";
 }
 
+void test_type_get()
+{
+    std::tuple<uint16_t, uint32_t> treasure = std::make_tuple(0, 42);
+
+    std::cout << std::get<uint32_t>(treasure);
+}
+
 int main()
 {
     test_type_deduction();
@@ -97,6 +104,8 @@ int main()
     test_init_captures();
 
     test_literals();
+
+    test_type_get();
 
     return 0;
 }
