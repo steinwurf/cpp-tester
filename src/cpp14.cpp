@@ -90,7 +90,8 @@ void test_literals()
 
 void test_type_get()
 {
-    std::tuple<uint16_t, uint32_t> treasure = std::make_tuple(0U, 42U);
+    std::tuple<uint16_t, uint32_t> treasure =
+        std::make_tuple<uint16_t, uint32_t>(0U, 42U);
 
     std::cout << std::get<uint32_t>(treasure);
 }
