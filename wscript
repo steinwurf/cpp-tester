@@ -12,8 +12,8 @@ def resolve(ctx):
         recurse=True,
         optional=False,
         resolver='git',
-        method='semver',
-        major=3,
+        method='checkout',
+        checkout='use-new-waf',
         sources=['github.com/steinwurf/waf-tools.git'])
 
 

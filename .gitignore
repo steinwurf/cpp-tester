@@ -16,10 +16,12 @@
 
 # For projects that use Waf for building: http://code.google.com/p/waf/
 waf-*
+waf3-*
 .waf-*
 .waf3-*
 .lock-*
 build
+build_symlinks
 bundle_dependencies
 
 # Gnu Global tag files
@@ -50,6 +52,7 @@ local.properties
 *.sdf
 *.opensdf
 *.log
+*.vcxproj*
 VSProjects
 
 
