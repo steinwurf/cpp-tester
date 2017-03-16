@@ -70,7 +70,7 @@ if __name__ == '__main__':
             # Import the code string as a module
             mod = importCode(code, "config_helper")
             # Run the actual config tool from the dynamic module
-            mod.config_tool(project_dependencies)
+            mod.config_tool(project_dependencies, project_name)
         except:
             print("Unexpected error:")
             print(traceback.format_exc())
